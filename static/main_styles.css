@@ -269,7 +269,7 @@ h3 {
     .nav-wrapper {
         padding-left: 10px;
         font-size: 3.8vw;
-	background-color: red;
+	background-color: none;
     }
 
     .nav-wrapper > .left-side {
