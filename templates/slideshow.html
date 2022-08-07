@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<body>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slideshow.css') }}">
+    <div class="slidershow middle">
+
+      <div class="slides">
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
+        <div class="slide s1">
+          <img src="{{url_for('static', filename='images/properties/property_1/property1.jpg')}}" alt="1 not found">
+        </div>
+        <div class="slide">
+          <img src="{{url_for('static', filename='images/properties/property_1/property2.jpg')}}" alt="2 not found">
+        </div>
+        <div class="slide">
+          <img src="{{url_for('static', filename='images/properties/property_1/property3.jpg')}}" alt="3 not found">
+        </div>
+        <div class="slide">
+          <img src="{{url_for('static', filename='images/properties/property_1/property2.jpg')}}" alt="4 not found">
+        </div>
+        <div class="slide">
+          <img src="{{url_for('static', filename='images/properties/property_1/property2.jpg')}}" alt="5 not found">
+        </div>
+      </div>
+
+      <div class="navigation">
+        <label for="r1" class="bar"></label>
+        <label for="r2" class="bar"></label>
+        <label for="r3" class="bar"></label>
+        <label for="r4" class="bar"></label>
+        <label for="r5" class="bar"></label>
+      </div>
+    </div>
+  </body>
+{% endblock %}
