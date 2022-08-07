@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<div class="container">
+		<div class="body-container">
+			<video autoplay muted loop id="myVideo">
+  				<source src="{{url_for('static', filename='images/cropped_bg_video.mov')}}">
+				<div class="video-opacity"></div>
+			</video>
+			<div class="index-body-background">
+				<h1>Bankbygget Sola</h1>
+				<div class="paragraph">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at cum ea earum harum, ipsam natus nulla placeat quo reprehenderit tempora voluptates! Accusamus consequuntur esse id laboriosam repellat. Aliquam, consequatur.
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
