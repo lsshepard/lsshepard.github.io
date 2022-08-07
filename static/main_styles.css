@@ -1,0 +1,313 @@
+:root {
+    --dark-blue: #0d5395;
+    --grey: #eeedea;
+}
+
+/* master styles*/
+body {
+	margin: 0px;
+    background-color: var(--grey);
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+
+/* nav styles */
+
+.nav-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 25px;
+	background-color: var(--grey);
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+    position absolute;
+	z-index: 3;
+
+}
+
+.nav-wrapper > div {
+	display: flex;
+}
+
+.nav-wrapper > div > div {
+	margin-right: 25px;
+	text-transform: uppercase;
+}
+
+.nav-image-wrapper {
+    mix-blend-mode: multiply;
+    width: 20px;
+}
+
+.nav-image-wrapper > a > img {
+    position: absolute;
+    width: 40px;
+    bottom: 25%;
+}
+
+.nav-link-wrapper {
+	height: 22px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
+}
+
+.nav-wrapper > .left-side > .nav-link-wrapper a {
+	color: var(--dark-blue);
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+.nav-wrapper > .right-side {
+	margin-right: 50px;
+}
+
+.nav-wrapper > .left-side {
+	margin-left: 20px;
+}
+
+.nav-wrapper > .right-side > .nav-link-wrapper a {
+	color: var(--dark-blue);
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+.nav-wrapper > .left-side > .nav-link-wrapper:hover {
+	border-bottom: 1px solid #0d5395;
+	color: rgb(171, 191, 255);
+}
+
+.nav-wrapper > .right-side > .nav-link-wrapper:hover {
+	border-bottom: 1px solid #0d5395;rgb(171, 191, 255);
+	color: rgb(171, 191, 255);
+}
+
+/* body/content */
+
+.body-container {
+    text-align: center;
+    position: relative;
+}
+
+.body-container > div > h1 {
+    margin-top: 25px;
+    color: #0d5395;
+    text-transform: uppercase;
+    font-size: 170%
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 90%
+}
+
+.body-container > img {
+    top: 10%;
+    left: 3%;
+    position: fixed;
+    width: 94%;
+    height: 500px;
+    object-fit: cover;
+    z-index: 1;
+    filter: opacity(90%);
+}
+
+.body-container > video {
+    top: 10%;
+    left: 3%;
+    position: fixed;
+    width: 94%;
+    height: 500px;
+    object-fit: cover;
+    z-index: 1;
+    filter: opacity(90%);
+}
+
+/*index*/
+
+.body-container > .index-body-background {
+    top: 380px;
+    left: 17.5%;
+    width: 65%;
+    height: 280px;
+    background-color: #fafafa;
+    position: absolute;
+    z-index: 2;
+
+}
+
+.body-container > .index-body-background > .paragraph {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    z.index: 3;
+    width: 90%;
+    left: 5%;
+    color: rgb(82, 81, 81);
+    line-height: 22px
+}
+
+/*vacant-properties*/
+
+.body-container > .properties-body-background {
+    top: 380px;
+    left: 17.5%;
+    width: 65%;
+    background-color: #fafafa;
+    position: relative;
+    z-index: 2;
+}
+
+.body-container > .properties-body-background > .properties > .property {
+    display: flex;
+}
+
+.body-container > .properties-body-background > .properties > .property > div {
+    padding: 40px;
+}
+
+.body-container > .properties-body-background > .properties > .property > .property-text {
+    width: 200%;
+    color: #727374;
+    font-size: 140%;
+    text-align: left;
+}
+
+.body-container > .properties-body-background > .properties > .property > .property-text > h3 {
+    color: var(--dark-blue);
+}
+
+.body-container > .properties-body-background > .properties > .property > .property-image-container {
+    width: 700%;
+}
+
+.body-container > .properties-body-background > .properties > .property > .property-image-container > div {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    margin-left: 0%;
+}
+
+.body-container > .properties-body-background > .properties > .property-seperator {
+    height: 1px;
+    margin: auto;
+    width: 94%;
+    background-color: var(--dark-blue);
+}
+
+.property-image-container > div > div > div > img {
+        height: auto;
+}
+
+/*our businesses*/
+
+.body-container > .our-businesses-background {
+    top: 380px;
+    left: 17.5%;
+    width: 65%;
+    background-color: #fafafa;
+    position: absolute;
+    z-index: 2;
+}
+
+.body-container > .our-businesses-background > .businesses > .business-trio {
+    display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+    padding-left: 5%;
+	width: 90%;
+}
+
+.body-container > .our-businesses-background > .businesses > .business-trio > .business {
+	background-color: var(--grey);
+	width: 25%;
+	background-color: var(--grey);
+    padding: 3%;
+}
+
+.body-container > .our-businesses-background > .businesses > .business-trio > .business > div {
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.body-container > .our-businesses-background > .businesses > .business-trio >.business > .business-logo {
+    height: 82%;
+}
+
+.body-container > .our-businesses-background > .businesses > .business-trio >.business > .business-logo > img {
+    width: 100%;
+}
+
+.body-container > .our-businesses-background > .businesses > .business-trio >.business > .business-title {
+    position: relative;
+    bottom: -11%;
+    font-size: 1.1vw;
+}
+
+.body-container > .our-businesses-background > .businesses > .business-trio >.business > .business-title > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+}
+
+.body-container > .our-businesses-background > .businesses > .business-trio {
+    padding-bottom: 25px;
+}
+
+
+@media only screen and (max-width: 550px) {
+
+    body {
+        width: 100%;
+        background-color: none;
+    }
+
+    .nav-wrapper {
+        padding-left: 10px;
+        font-size: 3.8vw;
+    }
+
+    .nav-wrapper > .left-side {
+    display: none;
+    }
+
+    .body-container > .properties-body-background {
+    top: 200px;
+    left: 12.5%;
+    width: 75%;
+    font-size: 3.5vw;
+    }
+
+    .body-container > .our-businesses-background {
+    top: 200px;
+    left: 12.5%;
+    width: 75%;
+    }
+
+    .property > .property-image-container {
+        position: relative;
+    }
+
+    .property-text {
+        position: absolute;
+    }
+
+    .property-image-container > div > div > div > img {
+        height: auto;
+        position: relative;
+        bottom: -60%;
+    }
+
+}
+
+
+@media only screen and (min-width: 1400px) {
+
+    .property-image-container > div > div > div > img {
+        width: 75%;
+    }
+}
