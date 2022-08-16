@@ -264,6 +264,8 @@ h3 {
 .contact_info > .paragraph {
     position: relative;
     padding-bottom: 45px;
+    padding-left: 25px;
+    padding-right: 25px;
     background-color: #fafafa ;
 }
 
