@@ -134,7 +134,7 @@ h3 {
     top: 380px;
     left: 17.5%;
     width: 65%;
-    height: 880px;
+    height: 280p;
     background-color: #fafafa;
     position: absolute;
     z-index: 2;
@@ -143,12 +143,12 @@ h3 {
 
 .body-container > .index-body-background > .paragraph {
     font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
+    position: relative;
     z.index: 3;
     width: 90%;
     left: 5%;
     color: rgb(82, 81, 81);
-    line-height: 22px
+    padding-bottom: 35px;
 }
 
 /*vacant-properties*/
@@ -312,3 +312,4 @@ h3 {
         width: 75%;
     }
 }
+
