@@ -215,24 +215,25 @@ h3 {
     z-index: 2;
 }
 
+.body-container > .our-businesses-background > .businesses {
+    columns: 3 auto;
+    padding: 7%;
+    padding-top: 0px;
+} 
+
 .body-container > .our-businesses-background > .businesses > .business-trio {
-    display: flex;
-	justify-content: space-between;
 	overflow: hidden;
-    padding-left: 5%;
-	width: 90%;
 }
 
 .body-container > .our-businesses-background > .businesses > .business-trio > .business {
 	background-color: var(--grey);
-	width: 25%;
-	background-color: var(--grey);
-    padding: 3%;
+    padding: 4%;
+    margin-bottom: 20px;
 }
 
 .body-container > .our-businesses-background > .businesses > .business-trio > .business > div {
     justify-content: space-between;
-    padding: 0px;
+    padding: 8px;
 }
 
 .body-container > .our-businesses-background > .businesses > .business-trio >.business > .business-logo {
@@ -258,6 +259,7 @@ h3 {
 .body-container > .our-businesses-background > .businesses > .business-trio {
     padding-bottom: 25px;
 }
+
 
 /* contact */
 
