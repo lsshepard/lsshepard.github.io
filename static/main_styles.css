@@ -204,7 +204,7 @@ h3 {
         height: auto;
 }
 
-.imgMap {
+.imgMap > img {
 	width: 80%;
 	margin: 10px;
 }
