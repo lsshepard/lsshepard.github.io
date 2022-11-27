@@ -204,6 +204,11 @@ h3 {
         height: auto;
 }
 
+.imgMap {
+	width: 80%;
+	margin: 10px;
+}
+
 /*our businesses*/
 
 .body-container > .our-businesses-background {
