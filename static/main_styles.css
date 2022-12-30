@@ -26,7 +26,7 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
-    position absolute;
+    position: absolute;
 	z-index: 3;
 
 }
@@ -83,7 +83,7 @@ body {
 }
 
 .nav-wrapper > .right-side > .nav-link-wrapper:hover {
-	border-bottom: 1px solid #0d5395;rgb(171, 191, 255);
+	border-bottom: 1px solid #0d5395;
 	color: rgb(171, 191, 255);
 }
 
@@ -144,7 +144,7 @@ h3 {
 .body-container > .index-body-background > .paragraph {
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    z.index: 3;
+    z-index: 3;
     width: 90%;
     left: 5%;
     color: rgb(82, 81, 81);
@@ -207,6 +207,15 @@ h3 {
 .imgMap > img {
 	width: 80%;
 	margin: 10px;
+}
+
+.ledig-lokale-bilder {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.ledig-lokale-bilder > img {
+    width: 33%;
 }
 
 /*our businesses*/
