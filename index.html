@@ -48,48 +48,81 @@
         }
 
         .filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
             margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: var(--card-background);
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         .filter-group {
-            flex: 1;
-            min-width: 200px;
+            background: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+            border: 1px solid var(--filter-border);
+            overflow: hidden;
         }
 
-        .filter-group h3 {
-            margin-bottom: 1.2rem;
+        .filter-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .filter-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 1.2rem;
+            cursor: pointer;
+            background: var(--filter-bg);
+            transition: background-color 0.2s ease;
+        }
+
+        .filter-header:hover {
+            background: var(--filter-hover);
+        }
+
+        .filter-header h3 {
             color: var(--primary-color);
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--filter-border);
+            margin: 0;
+        }
+
+        .filter-header .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .filter-group.open .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .filter-content {
+            padding: 1.2rem;
+            display: none;
+        }
+
+        .filter-group.open .filter-content {
+            display: block;
         }
 
         .filter-options {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem;
+            gap: 0.5rem 0.8rem;
         }
 
         .filter-option {
             position: relative;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             background: var(--filter-bg);
-            padding: 0.6rem 1rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             cursor: pointer;
             border: 1px solid var(--filter-border);
             transition: all 0.2s ease;
+            white-space: nowrap;
+            max-width: fit-content;
+            margin: 0.2rem 0;
         }
 
         .filter-option:hover {
@@ -114,7 +147,7 @@
         }
 
         .filter-option span {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 0.5rem;
         }
@@ -214,14 +247,24 @@
 
         <div class="filters">
             <div class="filter-group">
-                <h3>Technologies</h3>
-                <div class="filter-options" id="tech-filters">
+                <div class="filter-header">
+                    <h3>Technologies</h3>
+                    <svg class="toggle-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="filter-content" id="tech-filters">
                     <!-- Technology filters will be inserted here -->
                 </div>
             </div>
             <div class="filter-group">
-                <h3>Categories</h3>
-                <div class="filter-options" id="category-filters">
+                <div class="filter-header">
+                    <h3>Categories</h3>
+                    <svg class="toggle-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="filter-content" id="category-filters">
                     <!-- Category filters will be inserted here -->
                 </div>
             </div>
@@ -343,6 +386,14 @@
                 projectsGrid.appendChild(createProjectCard(project));
             });
         }
+
+        // Add toggle functionality
+        document.querySelectorAll('.filter-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const group = header.parentElement;
+                group.classList.toggle('open');
+            });
+        });
 
         fetch('projects.json')
             .then(response => response.json())
