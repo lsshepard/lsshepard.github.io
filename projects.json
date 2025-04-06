@@ -1,0 +1,142 @@
+{
+    "name": "Liam Shepard Personal Projects",
+    "projects": [
+      {
+        "title": "Concrete-mixer",
+        "date": "Spring, 2025",
+        "priority": 1000,
+        "description": "ML model that optimizes concrete proportions. Consists of a neural net and a customizable objective function. The NN models the relation between concrete ingredient proportions and properties. The objective function is configured from a GUI to reflect the concrete technologists requirements. The concrete mix is then optimized by using the gradients of the ingredient proportions with regard to the objective function. Made as MVP for entrepreneurship course TIØ4250.",
+        "used": ["Python", "Pytorch", "numpy", "pandas", "JS", "HTML", "CSS", "Docker"],
+        "categories": ["Machine Learning", "Optimization", "Entrepreneurship"]
+      },
+      {
+        "title": "Automated market maker w/ lending and leverage",
+        "date": "Spring 2025",
+        "priority": 900,
+        "description": "Protocol for guaranteeing collateral liquidity for volatile assets using constant product market maker. Developed algorithms and datastructures for opening / closing positions, adjusting liquidity, liquidating positions, swaps, etc.. All algorithms had O(lgn) computational complexity and O(n) storage complexity (or better). Intended for low-cap volatile blockchain assets. Ultimately discontinued after considering economic ramifications, such as who would benefit (rug-pullers), and who would be harmed (naive retail investors). Fun exercise in algorithm design though.",
+        "used": ["Algorithm design"],
+        "categories": ["Blockchain", "Algorithms", "Finance"]
+      },
+      {
+        "title": "Appevent",
+        "date": "Spring 2025",
+        "priority": 800,
+        "description": "WebApp for organizing and discovering events. Developed in a team of 6 students using Scrum for software development course TDT4140.",
+        "used": ["NextJS", "SupaBase", "Docker"],
+        "categories": ["Web Development", "Team Project"]
+      },
+      {
+        "title": "Cookbook",
+        "date": "Fall 2024",
+        "priority": 700,
+        "description": "App for creating, sharing and discovering cooking recipes. Developed in team of 4 students using Scrum for software development course IT1901.",
+        "used": ["Java", "JaCoCo", "Spotbugs", "Checkstyle", "Unit tests", "Integration tests", "Docker"],
+        "categories": ["Web Development", "Team Project"]
+      },
+      {
+        "title": "MinGPT",
+        "date": "Summer 24",
+        "priority": 1000,
+        "description": "Followed Andrej Karpathy's course on building a generative pretrained transformer from scratch.",
+        "used": ["Python", "PyTorch"],
+        "categories": ["Machine Learning", "Transformers"]
+      },
+      {
+        "title": "Sorting algorithms visualisations",
+        "date": "November 24",
+        "priority": 800,
+        "description": "Built data structure visualisation library and implemented sorting various algorithms (including insertion-sort, quick-sort, merge-sort, heapsort). Done as exam preparation for algorithms and data structures course TDT4120.",
+        "used": ["TypeScript"],
+        "categories": ["Algorithms", "Visualization"]
+      },
+      {
+        "title": "Neural Net Implementation",
+        "date": "May 24",
+        "priority": 900,
+        "description": "Implemented neural network for MNIST dataset from scratch in Java. Done as exam preparation for Java / Object Oriented Programming class TDT4140, and Linear Algebra class TMA4115.",
+        "used": ["Java", "linear algebra"],
+        "categories": ["Machine Learning", "Exam Preparation"]
+      },
+      {
+        "title": "Ærlig - social app for compliments",
+        "date": "Summer 23",
+        "priority": 700,
+        "description": "App to give anonymous compliments to friends. Intended to contribute positively to youths mental health. A reaction to existing social media's negative effects on youth.",
+        "used": ["Swift", "SwiftUI", "Firebase", "JavaScript", "XCode"],
+        "categories": ["Mobile App", "Mental Health", "Social Media"]
+      },
+      {
+        "title": "Lotus Turbo Challenge",
+        "date": "Spring 23",
+        "priority": 800,
+        "description": "Recreated lotus turbo challenge racing game. Ray casting for 3d rendering. Bezier curves for generating random infinite roads. Developed with two other students for a highschool IT class.",
+        "used": ["Ray casting", "Bezier curves", "JavaScripts", "HTML Canvas"],
+        "categories": ["Game Development", "Graphics"]
+      },
+      {
+        "title": "Ray caster 3d engine",
+        "date": "Fall 23",
+        "priority": 700,
+        "description": "Created rendering engine that simulates 3d using ray casting. From scratch, no libraries.",
+        "used": ["Ray casting", "JavaScript", "HTML Canvas"],
+        "categories": ["Graphics", "Rendering Engine"]
+      },
+      {
+        "title": "Ray tracer 3d engine",
+        "date": "Spring 22",
+        "priority": 700,
+        "description": "Developed a ray tracing engine in python. Allowed multiple light sources and various shapes. From scratch, no libraries (except displaying pixel data).",
+        "used": ["Python"],
+        "categories": ["Graphics", "Rendering Engine"]
+      },
+      {
+        "title": "N-body gravity simulation",
+        "date": "Spring 23",
+        "priority": 700,
+        "description": "Simulation of celestial bodies' paths in each other's gravitational fields. Used positions, velocity and mass, but not spin or volume. Used discrete steps. Done as a part of a larger project related to the N-body problem for a high school physics class.",
+        "used": ["Python"],
+        "categories": ["Physics", "Simulation"]
+      },
+      {
+        "title": "Lyapunov fractal visualisations",
+        "date": "Spring 22",
+        "priority": 500,
+        "description": "Computed and visualized Lyapunov fractals.",
+        "used": ["Python"],
+        "categories": ["Mathematics", "Visualization"]
+      },
+      {
+        "title": "Bankbygget Sola website",
+        "date": "Spring 22",
+        "priority": 400,
+        "description": "Developed homepage for commercial building. Easy configuration of tenants and available spaces.",
+        "used": ["JavaScript", "HTML", "Firebase", "CSS"],
+        "categories": ["Web Development", "Business Website"]
+      },
+      {
+        "title": "Colin Archer sailing",
+        "date": "Spring 23",
+        "priority": 400,
+        "description": "Developed homepage for sailing tour business. Converted to WordPress for easy configuration of text and gallery.",
+        "used": ["JavaScript", "HTML", "CSS", "Firebase", "PHP"],
+        "categories": ["Web Development", "Business Website"]
+      },
+      {
+        "title": "Unity games",
+        "date": "Summer 2016",
+        "priority": 500,
+        "description": "Developed multiple 3d unity games. First game developed during programming summer camp.",
+        "used": ["Unity", "C#"],
+        "categories": ["Game Development"]
+      },
+      {
+        "title": "Minecraft Mod",
+        "date": "2015",
+        "priority": 400,
+        "description": "Completed Youth Digital course for minecraft mod development.",
+        "used": ["Java"],
+        "categories": ["Game Development"]
+      }
+    ]
+  }
+  

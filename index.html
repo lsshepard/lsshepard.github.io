@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liam Shepard - Projects</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f5f6fa;
+            --text-color: #2c3e50;
+            --card-background: #ffffff;
+            --filter-bg: #f8f9fa;
+            --filter-hover: #e9ecef;
+            --filter-selected: #e3f2fd;
+            --filter-selected-text: #1976d2;
+            --filter-border: #dee2e6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-group h3 {
+            margin-bottom: 1.2rem;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--filter-border);
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .filter-option {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--filter-bg);
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: 1px solid var(--filter-border);
+            transition: all 0.2s ease;
+        }
+
+        .filter-option:hover {
+            background: var(--filter-hover);
+            transform: translateY(-1px);
+        }
+
+        .filter-option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .filter-option input:checked + span {
+            color: var(--filter-selected-text);
+            font-weight: 500;
+        }
+
+        .filter-option input:checked ~ .filter-option {
+            background: var(--filter-selected);
+            border-color: var(--filter-selected-text);
+        }
+
+        .filter-option span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-option input:checked + span::before {
+            content: "✓";
+            color: var(--filter-selected-text);
+            font-weight: bold;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-background);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-title {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .project-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: #e0e0e0;
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .tech-stack {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .tech-stack h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-item {
+            background: #e8f4f8;
+            color: var(--secondary-color);
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Liam Shepard</h1>
+            <p>Personal Projects Portfolio</p>
+        </header>
+
+        <div class="filters">
+            <div class="filter-group">
+                <h3>Technologies</h3>
+                <div class="filter-options" id="tech-filters">
+                    <!-- Technology filters will be inserted here -->
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Categories</h3>
+                <div class="filter-options" id="category-filters">
+                    <!-- Category filters will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+            <!-- Projects will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        let allProjects = [];
+        let selectedTechs = new Set();
+        let selectedCategories = new Set();
+
+        function createProjectCard(project) {
+            const projectCard = document.createElement('div');
+            projectCard.className = 'project-card';
+            
+            projectCard.innerHTML = `
+                <h2 class="project-title">${project.title}</h2>
+                <div class="project-date">${project.date}</div>
+                <p class="project-description">${project.description}</p>
+                <div class="project-tags">
+                    ${project.categories.map(category => 
+                        `<span class="tag">${category}</span>`
+                    ).join('')}
+                </div>
+                <div class="tech-stack">
+                    <h4>Technologies Used:</h4>
+                    <div class="tech-list">
+                        ${project.used.map(tech => 
+                            `<span class="tech-item">${tech}</span>`
+                        ).join('')}
+                    </div>
+                </div>
+            `;
+            
+            return projectCard;
+        }
+
+        function updateFilters() {
+            const techFilters = document.getElementById('tech-filters');
+            const categoryFilters = document.getElementById('category-filters');
+            
+            // Get unique technologies and categories
+            const allTechs = new Set();
+            const allCategories = new Set();
+            
+            allProjects.forEach(project => {
+                project.used.forEach(tech => allTechs.add(tech));
+                project.categories.forEach(category => allCategories.add(category));
+            });
+
+            // Create technology filters
+            techFilters.innerHTML = Array.from(allTechs).sort().map(tech => `
+                <label class="filter-option">
+                    <input type="checkbox" value="${tech}" 
+                           ${selectedTechs.has(tech) ? 'checked' : ''}>
+                    <span>${tech}</span>
+                </label>
+            `).join('');
+
+            // Create category filters
+            categoryFilters.innerHTML = Array.from(allCategories).sort().map(category => `
+                <label class="filter-option">
+                    <input type="checkbox" value="${category}"
+                           ${selectedCategories.has(category) ? 'checked' : ''}>
+                    <span>${category}</span>
+                </label>
+            `).join('');
+
+            // Add event listeners
+            document.querySelectorAll('#tech-filters input').forEach(input => {
+                input.addEventListener('change', (e) => {
+                    if (e.target.checked) {
+                        selectedTechs.add(e.target.value);
+                    } else {
+                        selectedTechs.delete(e.target.value);
+                    }
+                    displayProjects();
+                });
+            });
+
+            document.querySelectorAll('#category-filters input').forEach(input => {
+                input.addEventListener('change', (e) => {
+                    if (e.target.checked) {
+                        selectedCategories.add(e.target.value);
+                    } else {
+                        selectedCategories.delete(e.target.value);
+                    }
+                    displayProjects();
+                });
+            });
+        }
+
+        function displayProjects() {
+            const projectsGrid = document.getElementById('projects-grid');
+            projectsGrid.innerHTML = '';
+
+            const filteredProjects = allProjects.filter(project => {
+                // If no filters are selected, show all projects
+                if (selectedTechs.size === 0 && selectedCategories.size === 0) {
+                    return true;
+                }
+
+                // Check if project matches selected technologies
+                const matchesTech = selectedTechs.size === 0 || 
+                    project.used.some(tech => selectedTechs.has(tech));
+
+                // Check if project matches selected categories
+                const matchesCategory = selectedCategories.size === 0 || 
+                    project.categories.some(category => selectedCategories.has(category));
+
+                return matchesTech && matchesCategory;
+            });
+
+            filteredProjects.forEach(project => {
+                projectsGrid.appendChild(createProjectCard(project));
+            });
+        }
+
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                allProjects = data.projects.sort((a, b) => b.priority - a.priority);
+                updateFilters();
+                displayProjects();
+            })
+            .catch(error => console.error('Error loading projects:', error));
+    </script>
+</body>
+</html>
