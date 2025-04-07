@@ -70,7 +70,7 @@
         "date": "Spring 23",
         "priority": 800,
         "description": "Recreated lotus turbo challenge racing game. Ray casting for 3d rendering. Bezier curves for generating random infinite roads. Developed with two other students for a highschool IT class.",
-        "used": ["Ray casting", "Bezier curves", "JavaScripts", "HTML Canvas"],
+        "used": ["Ray casting", "Bezier curves", "JavaScript", "HTML Canvas"],
         "categories": ["Games", "Rendering", "Visualization", "Math"]
       },
       {
