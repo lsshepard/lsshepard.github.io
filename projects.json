@@ -7,7 +7,9 @@
         "priority": 1000,
         "description": "ML model that optimizes concrete proportions. Consists of a neural net and a customizable objective function. The NN models the relation between concrete ingredient proportions and properties. The objective function is configured from a GUI to reflect the concrete technologists requirements. The concrete mix is then optimized by using the gradients of the ingredient proportions with regard to the objective function. Made as MVP for entrepreneurship course TIØ4250.",
         "used": ["Python", "Pytorch", "numpy", "pandas", "JS", "HTML", "CSS", "Docker"],
-        "categories": ["Machine Learning"]
+        "categories": ["Machine Learning"],
+        "media_folder": "media/concrete_mixer",
+        "images": ["gui.png"]
       },
       {
         "title": "Automated market maker w/ lending and leverage",
@@ -15,15 +17,19 @@
         "priority": 900,
         "description": "Protocol for guaranteeing collateral liquidity for volatile assets using constant product market maker. Developed algorithms and datastructures for opening / closing positions, adjusting liquidity, liquidating positions, swaps, etc.. All algorithms had O(lgn) computational complexity and O(n) storage complexity (or better). Intended for low-cap volatile blockchain assets. Ultimately discontinued after considering economic ramifications, such as who would benefit (rug-pullers), and who would be harmed (naive retail investors). Fun exercise in algorithm design though.",
         "used": ["Algorithm design"],
-        "categories": ["Algorithms"]
+        "categories": ["Algorithms"],
+        "media_folder": "media/crowbar",
+        "images": ["amm_chart.png"]
       },
       {
         "title": "Appevent",
         "date": "Spring 2025",
         "priority": 800,
         "description": "WebApp for organizing and discovering events. Developed in a team of 6 students using Scrum for software development course TDT4140.",
-        "used": ["NextJS", "SupaBase", "Docker"],
-        "categories": ["WebDev", "Team", "Social"]
+        "used": ["NextJS", "SupaBase", "Docker", "JavaScript"],
+        "categories": ["WebDev", "Team", "Social"],
+        "media_folder": "media/appevent",
+        "images": ["gui.png"]
       },
       {
         "title": "Cookbook",
@@ -31,7 +37,9 @@
         "priority": 700,
         "description": "App for creating, sharing and discovering cooking recipes. Developed in team of 4 students using Scrum for software development course IT1901.",
         "used": ["Java", "JaCoCo", "Spotbugs", "Checkstyle", "Unit tests", "Integration tests", "Docker"],
-        "categories": ["WebDev", "Team"]
+        "categories": ["WebDev", "Team"],
+        "media_folder": "media/kok_og_kode",
+        "images": ["kokebok_chart.png"]
       },
       {
         "title": "MinGPT",
@@ -53,7 +61,7 @@
         "title": "Neural Net Implementation",
         "date": "May 24",
         "priority": 900,
-        "description": "Implemented neural network for MNIST dataset from scratch in Java. Done as exam preparation for Java / Object Oriented Programming class TDT4140, and Linear Algebra class TMA4115.",
+        "description": "Implemented neural network for MNIST dataset from scratch in Java. Derived and implemented backpropagation algorithm from scratch. Done as exam preparation for Java / Object Oriented Programming class TDT4140, and Linear Algebra class TMA4115.",
         "used": ["Java", "linear algebra"],
         "categories": ["Machine Learning", "Math"]
       },
@@ -71,7 +79,9 @@
         "priority": 800,
         "description": "Recreated lotus turbo challenge racing game. Ray casting for 3d rendering. Bezier curves for generating random infinite roads. Developed with two other students for a highschool IT class.",
         "used": ["Ray casting", "Bezier curves", "JavaScript", "HTML Canvas"],
-        "categories": ["Games", "Rendering", "Visualization", "Math"]
+        "categories": ["Games", "Rendering", "Visualization", "Math"],
+        "media_folder": "media/lotus_turbo_challange",
+        "images": ["lotus_driving.png"]
       },
       {
         "title": "Ray caster 3d engine",
@@ -87,7 +97,9 @@
         "priority": 700,
         "description": "Developed a ray tracing engine in python. Allowed multiple light sources and various shapes. From scratch, no libraries (except displaying pixel data).",
         "used": ["Python"],
-        "categories": ["Rendering", "Visualization", "Math"]
+        "categories": ["Rendering", "Visualization", "Math"],
+        "media_folder": "media/ray_tracer",
+        "images": ["render.jpg"]
       },
       {
         "title": "N-body gravity simulation",
@@ -103,7 +115,9 @@
         "priority": 500,
         "description": "Computed and visualized Lyapunov fractals.",
         "used": ["Python"],
-        "categories": ["Math", "Visualization"]
+        "categories": ["Math", "Visualization"],
+        "media_folder": "media/lyapunov",
+        "images": ["2.PNG"]
       },
       {
         "title": "Bankbygget Sola website",

@@ -33,7 +33,9 @@
             font-family: var(--font-body);
             line-height: 1.6;
             color: var(--text-color);
-            background: linear-gradient(105deg, #ffffff 0%, #b7bdae 100%);
+            /* background: linear-gradient(105deg, #ffffff 0%, #b7bdae 100%); */
+            /* background: linear-gradient(105deg, #1ec672 0%, #000446 100%); */
+            background: #efefef;
             min-height: 100vh;
             padding: 0;
             margin: 0;
@@ -49,7 +51,7 @@
         header {
             text-align: center;
             margin-bottom: 3rem;
-            background-image: url('northern_lights.jpg');
+            background-image: url('media/northern_lights.jpg');
             background-size: cover;
             background-position: center;
             padding: 6rem 0;
@@ -109,25 +111,29 @@
             margin-bottom: 1rem;
         }
 
-        header .contact {
+        .about {
             font-family: var(--font-body);
-            font-size: 1.1rem;
+            font-size: 1rem;
             letter-spacing: 0.5px;
-            opacity: 0.8;
-            position: relative;
+            opacity: 0.9;
             z-index: 1;
             color: #ffffff;
+            position: relative;
+            max-width: 600px;
+            text-align: left;
+            line-height: 1.6;
         }
 
-        header .contact a {
+        .about a {
             color: #ffffff;
             text-decoration: none;
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            transition: border-color 0.2s ease;
+            transition: all 0.2s ease;
         }
 
-        header .contact a:hover {
+        .contact a:hover {
             border-color: rgba(255, 255, 255, 0.8);
+            opacity: 1;
         }
 
         .filters {
@@ -247,18 +253,188 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
+            transition: grid-template-columns 0.3s ease;
+            position: relative;
+            grid-auto-flow: row;
         }
 
         .project-card {
             background: var(--card-background);
             border-radius: 10px;
-            padding: 1.5rem;
+            overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            grid-column: auto / span 1;
+            transform-origin: top center;
+            margin-bottom: 2rem;
+            will-change: transform, grid-column;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
+        }
+
+        .project-card.expanded {
+            cursor: default;
+            grid-column: 1 / -1;
+            margin: 0 -2rem;
+            width: calc(100% + 4rem);
+            border-radius: 10px;
+            transform: scale(1.02);
+            z-index: 1;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .project-card.expanded .project-images {
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+        }
+
+        .project-card.expanded .project-content {
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+        }
+
+        /* Push all cards after the expanded card down */
+        .project-card.expanded ~ .project-card {
+            margin-top: 2rem;
+        }
+
+        /* Hide all cards in the same row */
+        .project-card.expanded {
+            grid-row: auto;
+        }
+
+        .project-card.expanded ~ .project-card {
+            grid-row: auto;
+            margin-top: 2rem;
+        }
+
+        .project-card.expanded:hover {
+            transform: scale(1.02);
+        }
+
+        .project-card:not(.expanded) .project-content {
+            max-height: 0;
+            opacity: 0;
+            padding: 0;
+        }
+
+        .project-card.expanded .project-content {
+            padding: 2rem;
+            max-height: 2000px;
+            opacity: 1;
+            transition: opacity 0.2s ease;
+        }
+
+        .project-card.expanded .project-images {
+            height: 400px;
+            transition: height 0.2s ease;
+        }
+
+        .project-card.expanded .project-thumbnail {
+            height: 400px;
+            transition: height 0.2s ease;
+        }
+
+        .project-images {
+            padding: 0;
+            background: #f8f8f8;
+            display: flex;
+            gap: 0;
+            flex-wrap: wrap;
+            height: 300px;
+            overflow: hidden;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-preview.no-image .project-images {
+            display: none;
+        }
+
+        .project-preview {
+            position: relative;
+            min-height: 300px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .project-preview.no-image {
+            min-height: 300px;
+        }
+
+        .project-preview-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2.5rem 1.5rem 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4) 80%, rgba(0,0,0,0));
+            color: white;
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            line-height: 1.3;
+            font-weight: 500;
+            z-index: 2;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .project-preview.no-image .project-preview-title {
+            position: absolute;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4) 80%, rgba(0,0,0,0));
+            padding: 2.5rem 1.5rem 1.5rem;
+            text-align: left;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        .project-images.single-image .project-thumbnail {
+            width: 100%;
+            /* height: 100%; */
+            border-radius: 0;
+            margin: 0;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .project-images.two-images .project-thumbnail {
+            width: 50%;
+            height: 100%;
+            border-radius: 0;
+            margin: 0;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .project-images.three-images .project-thumbnail {
+            width: calc(100% / 3);
+            height: 100%;
+            border-radius: 0;
+            margin: 0;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .project-thumbnail {
+            object-fit: contain;
+            object-position: center;
+            transition: transform 0.2s ease;
+            box-shadow: none;
+            z-index: 1;
+        }
+
+        .project-thumbnail:hover {
+            transform: scale(1.02);
+            cursor: pointer;
         }
 
         .project-title {
@@ -275,14 +451,14 @@
         }
 
         .project-description {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .tag {
@@ -293,8 +469,8 @@
         }
 
         .tech-stack {
-            margin-top: 1rem;
-            padding-top: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
             border-top: 1px solid #eee;
         }
 
@@ -336,10 +512,13 @@
 </head>
 <body>
     <header>
-        <h1>Liam R. Shepard</h1>
-        <p>Personal Projects Portfolio</p>
-        <div class="contact">
-            Conctact: <a href="mailto:liam.robert.shepard@gmail.com">liam.robert.shepard@gmail.com</a>
+        <h1>Liam R. Shepard / Portfolio</h1>
+        <div class="about">
+            Exploring, building, learning.
+            <br>
+            Below are some of my projects, excluding work on my CV.
+            <br>
+            Contact: <a href="mailto:liam.robert.shepard@gmail.com">liam.robert.shepard@gmail.com</a>
         </div>
     </header>
     
@@ -383,26 +562,124 @@
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card';
             
+            let imagesHtml = '';
+            const hasImages = project.media_folder && project.images && project.images.length > 0;
+            
+            if (hasImages) {
+                const mediaFolder = project.media_folder.replace(/^\//, '');
+                imagesHtml = `
+                    <div class="project-images">
+                        ${project.images.map(img => `
+                            <img src="${mediaFolder}/${img}" 
+                                 alt="${project.title}" 
+                                 class="project-thumbnail"
+                                 onerror="this.remove(); updateImageContainer(this.parentElement);"
+                                 onload="updateImageContainer(this.parentElement)"
+                                 loading="lazy">
+                        `).join('')}
+                    </div>
+                `;
+            }
+            
             projectCard.innerHTML = `
-                <h2 class="project-title">${project.title}</h2>
-                <div class="project-date">${project.date}</div>
-                <p class="project-description">${project.description}</p>
-                <div class="project-tags">
-                    ${project.categories.map(category => 
-                        `<span class="tag">${category}</span>`
-                    ).join('')}
+                <div class="project-preview ${hasImages ? '' : 'no-image'}">
+                    ${imagesHtml}
+                    <div class="project-preview-title">${project.title}</div>
                 </div>
-                <div class="tech-stack">
-                    <h4>Technologies Used:</h4>
-                    <div class="tech-list">
-                        ${project.used.map(tech => 
-                            `<span class="tech-item">${tech}</span>`
+                <div class="project-content">
+                    <h2 class="project-title">${project.title}</h2>
+                    <div class="project-date">${project.date}</div>
+                    <p class="project-description">${project.description}</p>
+                    <div class="project-tags">
+                        ${project.categories.map(category => 
+                            `<span class="tag">${category}</span>`
                         ).join('')}
+                    </div>
+                    <div class="tech-stack">
+                        <h4>Technologies Used:</h4>
+                        <div class="tech-list">
+                            ${project.used.map(tech => 
+                                `<span class="tech-item">${tech}</span>`
+                            ).join('')}
+                        </div>
                     </div>
                 </div>
             `;
-            
+
+            // Add click handler for expanding/collapsing
+            projectCard.addEventListener('click', (e) => {
+                // Don't collapse if clicking inside the expanded content
+                if (projectCard.classList.contains('expanded') && 
+                    e.target.closest('.project-content')) {
+                    return;
+                }
+
+                const wasExpanded = projectCard.classList.contains('expanded');
+                const projectsGrid = document.getElementById('projects-grid');
+                const allCards = Array.from(projectsGrid.children);
+                const cardIndex = allCards.indexOf(projectCard);
+
+                // Remove expanded class from all cards
+                allCards.forEach(card => card.classList.remove('expanded'));
+
+                if (!wasExpanded) {
+                    // Calculate the row of the clicked card
+                    const gridStyle = window.getComputedStyle(projectsGrid);
+                    const gridColumnCount = gridStyle.getPropertyValue('grid-template-columns').split(' ').length;
+                    const cardRow = Math.floor(cardIndex / gridColumnCount);
+                    
+                    // Find all cards in the same row
+                    const cardsInRow = allCards.filter((card, index) => 
+                        Math.floor(index / gridColumnCount) === cardRow
+                    );
+
+                    // Expand the clicked card
+                    projectCard.classList.add('expanded');
+
+                    // Move all cards in the same row below the expanded card
+                    requestAnimationFrame(() => {
+                        cardsInRow.forEach(card => {
+                            if (card !== projectCard) {
+                                card.style.order = '1';
+                            }
+                        });
+                        projectCard.style.order = '0';
+                    });
+                } else {
+                    // Reset all card orders when collapsing
+                    requestAnimationFrame(() => {
+                        allCards.forEach(card => {
+                            card.style.order = '';
+                        });
+                    });
+                }
+            });
+
             return projectCard;
+        }
+
+        function updateImageContainer(container) {
+            if (!container) return;
+            
+            const visibleImages = container.querySelectorAll('img:not([style*="display: none"])');
+            const count = visibleImages.length;
+            
+            // Remove all existing count-based classes
+            container.classList.remove('single-image', 'two-images', 'three-images');
+            
+            // If no images are visible, hide the container
+            if (count === 0) {
+                container.style.display = 'none';
+                return;
+            }
+            
+            // Add appropriate class based on number of visible images
+            if (count === 1) container.classList.add('single-image');
+            else if (count === 2) container.classList.add('two-images');
+            else if (count === 3) container.classList.add('three-images');
+            
+            // Make container visible
+            container.style.display = 'flex';
         }
 
         function updateFilters() {
