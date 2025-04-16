@@ -84,7 +84,7 @@
         "images": ["lotus_driving.png"]
       },
       {
-        "title": "Ray caster 3d engine",
+        "title": "Ray casting 3d engine",
         "date": "Fall 23",
         "priority": 700,
         "description": "Created rendering engine that simulates 3d using ray casting. From scratch, no libraries.",
@@ -92,7 +92,7 @@
         "categories": ["Rendering", "Math", "Visualization"]
       },
       {
-        "title": "Ray tracer 3d engine",
+        "title": "Ray tracing 3d engine",
         "date": "Spring 22",
         "priority": 700,
         "description": "Developed a ray tracing engine in python. Allowed multiple light sources and various shapes. From scratch, no libraries (except displaying pixel data).",
@@ -120,20 +120,24 @@
         "images": ["2.PNG"]
       },
       {
-        "title": "Bankbygget Sola website",
+        "title": "Bankbygget Sola Website",
         "date": "Spring 22",
         "priority": 400,
         "description": "Developed homepage for commercial building. Easy configuration of tenants and available spaces. Served as my introduction to web development.",
         "used": ["JavaScript", "HTML", "Firebase", "CSS"],
-        "categories": ["WebDev"]
+        "categories": ["WebDev"],
+        "media_folder": "media/bankbygget",
+        "images": ["bb_ledige_lokaler.png"]
       },
       {
-        "title": "Colin Archer sailing",
+        "title": "Colin Archer Sailing",
         "date": "Spring 23",
         "priority": 400,
         "description": "Developed homepage for sailing tour business. Converted to WordPress for easy configuration of text and gallery.",
         "used": ["JavaScript", "HTML", "CSS", "Firebase", "PHP"],
-        "categories": ["WebDev"]
+        "categories": ["WebDev"],
+        "media_folder": "media/coling_archer_sailing",
+        "images": ["homepage.png"]
       },
       {
         "title": "Unity games",
