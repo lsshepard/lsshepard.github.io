@@ -47,13 +47,15 @@
         "priority": 1000,
         "description": "Followed Andrej Karpathy's course on building a generative pretrained transformer from scratch.",
         "used": ["Python", "PyTorch"],
-        "categories": ["Machine Learning"]
+        "categories": ["Machine Learning"],
+        "media_folder": "media/mingpt",
+        "images": []
       },
       {
-        "title": "Sorting algorithms visualisations",
+        "title": "Sorting algorithm visualisations",
         "date": "November 24",
         "priority": 800,
-        "description": "Built data structure visualisation library and implemented sorting various algorithms (including insertion-sort, quick-sort, merge-sort, heapsort). Done as exam preparation for algorithms and data structures course TDT4120.",
+        "description": "Built data structure visualisation library and implemented various sorting algorithms (including insertion-sort, quick-sort, merge-sort, heapsort). Done as exam preparation for algorithms and data structures course TDT4120.",
         "used": ["TypeScript"],
         "categories": ["Algorithms", "Visualization"]
       },
@@ -145,7 +147,9 @@
         "priority": 500,
         "description": "Developed multiple 3d unity games. First game developed during programming summer camp.",
         "used": ["Unity", "C#"],
-        "categories": ["Games"]
+        "categories": ["Games"],
+        "media_folder": "media/unity",
+        "images": ["ball_mountain.jpg"]
       },
       {
         "title": "Minecraft Mod",
