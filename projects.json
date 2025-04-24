@@ -6,7 +6,7 @@
         "date": "Spring 2025",
         "priority": 1000,
         "description": "ML model that optimizes concrete proportions. Consists of a neural net and a customizable objective function. The NN models the relation between concrete ingredient proportions and properties. The objective function is configured from a GUI to reflect the concrete technologists requirements. The concrete mix is then optimized by using the gradients of the ingredient proportions with regard to the objective function. Made as MVP for entrepreneurship course TIØ4250.",
-        "used": ["Python", "Pytorch", "numpy", "pandas", "JS", "HTML", "CSS", "Docker"],
+        "used": ["Python", "PyTorch", "numpy", "pandas", "JavaScript", "HTML", "CSS", "Docker"],
         "categories": ["Machine Learning"],
         "media_folder": "media/concrete_mixer",
         "images": ["gui.png"]
@@ -15,7 +15,7 @@
         "title": "Automated market maker w/ lending and leverage",
         "date": "Spring 2025",
         "priority": 900,
-        "description": "Protocol for guaranteeing collateral liquidity for volatile assets using constant product market maker. Developed algorithms and datastructures for opening / closing positions, adjusting liquidity, liquidating positions, swaps, etc.. All algorithms had O(lgn) computational complexity and O(n) storage complexity (or better). Intended for low-cap volatile blockchain assets. Ultimately discontinued after considering economic ramifications, such as who would benefit (rug-pullers), and who would be harmed (naive retail investors). Fun exercise in algorithm design though.",
+        "description": "Protocol for guaranteeing collateral liquidity for volatile assets modifying the constant product market maker. Developed algorithms and datastructures for opening / closing positions, adjusting liquidity, liquidating positions, swaps, etc.. All algorithms had O(lgn) computational complexity and O(n) storage complexity (or better). Intended for low-cap volatile blockchain assets. Ultimately discontinued after considering economic ramifications, such as who would on average benefit (rug-pullers), and who would be harmed (naive retail investors). Fun exercise in algorithm design though.",
         "used": ["Algorithm design"],
         "categories": ["Algorithms"],
         "media_folder": "media/crowbar",
@@ -45,7 +45,7 @@
         "title": "MinGPT",
         "date": "Summer 24",
         "priority": 1000,
-        "description": "Followed Andrej Karpathy's course on building a generative pretrained transformer from scratch.",
+        "description": "Followed Andrej Karpathy's course on building a generative pretrained transformer (GPT) from scratch. Learned how to implement core transformer components, such as self-attention, multi-head attention, feed-forward networks, positional encoding, and more.",
         "used": ["Python", "PyTorch"],
         "categories": ["Machine Learning"],
         "media_folder": "media/mingpt",
@@ -79,7 +79,7 @@
         "title": "Lotus Turbo Challenge",
         "date": "Spring 23",
         "priority": 800,
-        "description": "Recreated lotus turbo challenge racing game. Ray casting for 3d rendering. Bezier curves for generating random infinite roads. Developed with two other students for a highschool IT class.",
+        "description": "Recreated lotus turbo challenge racing game. Ray casting for rendering. Bezier curves for generating random infinite roads. Developed with two other students for a highschool IT class.",
         "used": ["Ray casting", "Bezier curves", "JavaScript", "HTML Canvas"],
         "categories": ["Games", "Rendering", "Visualization", "Math"],
         "media_folder": "media/lotus_turbo_challange",
@@ -97,14 +97,14 @@
         "title": "Ray tracing 3d engine",
         "date": "Spring 22",
         "priority": 700,
-        "description": "Developed a ray tracing engine in python. Allowed multiple light sources and various shapes. From scratch, no libraries (except displaying pixel data).",
+        "description": "Developed a ray tracing engine in python. Allowed multiple light sources and various shapes. From scratch, no libraries (except displaying pixel data). Attached image has a high step length.",
         "used": ["Python"],
         "categories": ["Rendering", "Visualization", "Math"],
         "media_folder": "media/ray_tracer",
         "images": ["render.jpg"]
       },
       {
-        "title": "N-body gravity simulation",
+        "title": "N-body gravitational simulation",
         "date": "Spring 23",
         "priority": 700,
         "description": "Simulation of celestial bodies' paths in each other's gravitational fields. Used positions, velocity and mass, but not spin or volume. Used discrete steps. Done as a part of a larger project related to the N-body problem for a high school physics class.",
@@ -132,7 +132,7 @@
         "images": ["bb_ledige_lokaler.png"]
       },
       {
-        "title": "Colin Archer Sailing",
+        "title": "Colin Archer Sailing Website",
         "date": "Spring 23",
         "priority": 400,
         "description": "Developed homepage for sailing tour business. Converted to WordPress for easy configuration of text and gallery.",
@@ -155,7 +155,7 @@
         "title": "Minecraft Mod",
         "date": "2015",
         "priority": 400,
-        "description": "Completed Youth Digital course for minecraft mod development.",
+        "description": "Developed a minecraft mod in connection with a Youth Digital course.",
         "used": ["Java"],
         "categories": ["Games"]
       }
