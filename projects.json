@@ -2,20 +2,20 @@
     "name": "Liam Shepard Personal Projects",
     "projects": [
       {
-        "title": "Concrete-mixer",
+        "title": "CemSaver - Concrete Mix Optimizer",
         "date": "Spring 2025",
         "priority": 1000,
-        "description": "ML model that optimizes concrete proportions. Consists of a neural net and a customizable objective function. The NN models the relation between concrete ingredient proportions and properties. The objective function is configured from a GUI to reflect the concrete technologists requirements. The concrete mix is then optimized by using the gradients of the ingredient proportions with regard to the objective function. Made as MVP for entrepreneurship course TIØ4250.",
+        "description": "ML model that optimizes concrete proportions. Consists of a neural net and a customizable objective function. The NN models the relation between concrete ingredient proportions and properties. The objective function is configured from a GUI to reflect the concrete technologists requirements. The concrete mix is then optimized by using the gradients of the ingredient proportions with regard to the objective function.",
         "used": ["Python", "PyTorch", "numpy", "pandas", "JavaScript", "HTML", "CSS", "Docker"],
         "categories": ["Machine Learning"],
         "media_folder": "media/concrete_mixer",
         "images": ["gui.png"]
       },
       {
-        "title": "Automated market maker w/ lending and leverage",
+        "title": "Crowbar - Automated market maker w/ lending and leverage",
         "date": "Spring 2025",
         "priority": 900,
-        "description": "Protocol for guaranteeing collateral liquidity for volatile assets modifying the constant product market maker. Developed algorithms and datastructures for opening / closing positions, adjusting liquidity, liquidating positions, swaps, etc.. All algorithms had O(lgn) computational complexity and O(n) storage complexity (or better). Intended for low-cap volatile blockchain assets. Ultimately discontinued after considering economic ramifications, such as who would on average benefit (rug-pullers), and who would be harmed (naive retail investors). Fun exercise in algorithm design though.",
+        "description": "Protocol for guaranteeing collateral liquidity for volatile assets modifying the constant product market maker. Developed algorithms and datastructures for opening / closing positions, adjusting liquidity, liquidating positions, swaps, etc.. All algorithms had O(lgn) computational complexity and O(n) storage complexity (or better). Intended for low-cap volatile blockchain assets. Ultimately discontinued after considering economic ramifications; regulation of financial derivatives exist for a reason. Fun exercise in algorithm design though.",
         "used": ["Algorithm design"],
         "categories": ["Algorithms"],
         "media_folder": "media/crowbar",
