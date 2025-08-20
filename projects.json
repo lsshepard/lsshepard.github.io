@@ -24,7 +24,7 @@
       "title": "CemSaver - Concrete Mix Optimizer",
       "date": "Spring 2025",
       "priority": 1000,
-      "description": "ML model that optimizes concrete proportions. Consists of a neural net and a customizable objective function. The NN models the relation between concrete ingredient proportions and properties. The objective function is configured from a GUI to reflect the concrete technologists requirements. The concrete mix is then optimized by using the gradients of the ingredient proportions with regard to the objective function.",
+      "description": "ML model that optimizes concrete proportions. Consists of a neural net and a customizable objective function. The NN models the relation between concrete ingredient proportions and properties. The objective function is configured from a GUI to reflect the concrete technologists requirements. The concrete mix is then optimized by using the gradients of the ingredient proportions with regard to the objective function. After a successful MVP, the project has evolved into a startup now advancing toward commercial deployment.",
       "used": [
         "Python",
         "PyTorch",
