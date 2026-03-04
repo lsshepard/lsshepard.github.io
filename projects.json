@@ -2,6 +2,46 @@
   "name": "Liam Shepard Personal Projects",
   "projects": [
     {
+      "title": "[WIP] MuZero Implementation",
+      "date": "Spring 26",
+      "priority": 1200,
+      "description": "Building a from-scratch implementation of DeepMind's MuZero algorithm, a model-based reinforcement learning system that learns to play video games by training three coupled neural networks (representation, dynamics, and prediction) entirely through self-play, without access to the game's rules. The system will integrate Monte Carlo Tree Search (u-MCTS) with backpropagation through time (BPTT) across a composite neural network, using JAX/PyTorch for automatic differentiation. The trained agent will be applied to an arcade-style video game, demonstrating MuZero's ability to learn a latent world model and near-optimal policy from raw gameplay experience alone. Done for AI programming course IT3105 and is currently in progress.",
+      "used": ["JAX", "Python", "numpy"],
+      "categories": ["Machine Learning / AI"],
+      "links": ["https://github.com/lsshepard/MuZero-implementation"]
+    },
+    {
+      "title": "Bastian AI - Agent Sandbox",
+      "date": "Spring 26",
+      "priority": 1150,
+      "description": "Bastion AI is a transparent security gateway that protects AI agents by intercepting all outbound HTTP traffic through a TLS-intercepting proxy, without requiring any code changes to the agent. A multi-layered detection pipeline combining regex patterns, a fine-tuned Llama Prompt Guard classifier, and 30+ configurable scanners catches prompt injections, RAG poisoning, secret exfiltration, and PII leakage in real time, sanitizing or blocking threats before they reach upstream services. The system also includes network-level egress enforcement, split-token authentication, a full audit trail, and an end-to-end ML training pipeline using external datasets in addition to Claude-generated synthetic data. Built over 20 hours in a team of 4 during the HackEurope hackathon.",
+      "used": [
+        "Python",
+        "PyTorch",
+        "Hugging Face",
+        "Synthetic data generation, LLMs",
+        "Docker"
+      ],
+      "categories": ["Machine Learning / AI"],
+      "media_folder": "media/bastion",
+      "images": ["bastion.png"],
+      "links": [
+        "https://github.com/adrianfagerland/hackeurope",
+        "https://devpost.com/software/bastion-ai"
+      ]
+    },
+    {
+      "title": "JAX Controller",
+      "date": "Spring 26",
+      "priority": 850,
+      "description": "A JAX-accelerated control systems framework that trains both classic PID controllers and neural network-based PID controllers using gradient descent and automatic differentiation. It supports arbitrary plant models, including a bathtub water level system, Cournot economic competition, and cruise control. JAX JIT compilation and lax.scan are used for a ~400x speedup over naive implementations. The project demonstrates applying deep learning optimization techniques to classical control theory problems. Done as a project for AI programming course IT3105.",
+      "used": ["JAX", "Python", "numpy"],
+      "categories": ["Machine Learning / AI"],
+      "media_folder": "media/jax_control",
+      "images": ["jax.png"],
+      "links": ["https://github.com/lsshepard/JAX-Controller"]
+    },
+    {
       "title": "NLP First principles political argument mining",
       "date": "Summer 25",
       "priority": 950,
