@@ -4,7 +4,7 @@
     {
       "title": "[WIP] MuZero Implementation",
       "date": "Spring 26",
-      "priority": 1200,
+      "priority": 1100,
       "description": "Building a from-scratch implementation of DeepMind's MuZero algorithm, a model-based reinforcement learning system that learns to play video games by training three coupled neural networks (representation, dynamics, and prediction) entirely through self-play, without access to the game's rules. The system will integrate Monte Carlo Tree Search (u-MCTS) with backpropagation through time (BPTT) across a composite neural network, using JAX/PyTorch for automatic differentiation. The trained agent will be applied to an arcade-style video game, demonstrating MuZero's ability to learn a latent world model and near-optimal policy from raw gameplay experience alone. Done for AI programming course IT3105 and is currently in progress.",
       "used": ["JAX", "Python", "numpy"],
       "categories": ["Machine Learning / AI"],
